@@ -1,3 +1,28 @@
 .row h1 {
-    color: green;
+    color: red;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container-content {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.page-footer {
+    background-color: #f8f9fa;
+}
+
+.page-footer-text {
+    padding: 15px 60px;
+}
+
+.page-footer-copyright {
+    padding: 20px 30px;
+    background-color: #e0e0e0;
+    font-size: bold;
 }

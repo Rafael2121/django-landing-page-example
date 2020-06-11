@@ -14,26 +14,47 @@
     </head>
     <body>
         <div class="container-fluid">
-        
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand">Example Lading Page</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="textoNavbar">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item {% if page == 'home' %}active{% endif %}">
-                            <a class="nav-link" href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item {% if page == 'about' %}active{% endif %}">
-                            <a class="nav-link" href="{% url 'about' %}">Sobre</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand">Example Lading Page</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="textoNavbar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item {% if page == 'home' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'home' %}">Home</a>
+                            </li>
+                            <li class="nav-item {% if page == 'about' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'about' %}">Sobre</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
 
             {% block content %}
             {% endblock  %}
+
+            <footer class="page-footer">
+                <div class="row">
+                    <div class="col-6 page-footer-text">
+                        <h4>Lorem Text Title</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="col-6 page-footer-text">
+                        <h4>Lorem Text Title</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="page-footer-copyright text-center">
+                            @XXXX Copyright
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
         <!-- Bootstrap CDN scripts -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
