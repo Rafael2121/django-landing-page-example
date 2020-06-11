@@ -1,10 +1,32 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, HttpResponseRedirect
+from django.views import View
 
 
-def home(request):
-    return render(request, 'home/home.html', {'page': 'home'})
+class Home(View):
+
+    template = 'home/home.html'
+
+    def get(self, request):   
+        return render(request,self.template, {'page': 'home'})
+
+    def post(self, request):
+        subject = request.POST['subject']
+        message = request.POST['message']
+
+        print("Assunto: {} - Mensagem: {}".format(subject, message))
+        return HttpResponseRedirect("/")
 
 
-def about(request):
-    return render(request, 'about/about.html', {'page': 'about'})
+class About(View):
+
+    template = 'about/about.html'
+
+    def get(self, request):
+        return render(request, self.template, {'page': 'about'})
+
+    def post(self, request):
+        subject = request.POST['subject']
+        message = request.POST['message']
+
+        print("Assunto: {} - Mensagem: {}".format(subject, message))
+        return HttpResponseRedirect("/sobre")
